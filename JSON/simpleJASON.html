@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="jquery-2.2.3.min.js"></script>
+<script>
+$(document).ready(function(){
+			$("#btn").click(function(){
+				$.ajax({
+				  url: "data.txt",				  
+				  success: function( result ) {
+						var arr = JSON.parse(result);
+						var x = "<table border=1><tr><td>";
+						 x  =x + arr[0].id + "</td><td>";
+						 x  =x + arr[0].name + "</td></tr>";
+						 x= x +"<tr><td>";
+						  x  =x + arr[1].id + "</td><td>";
+						 x  =x + arr[1].name + "</td></tr>";
+						 x  =x + "</table>";
+		document.getElementById("mytable").innerHTML = x;
+						 
+				  }
+				});
+			
+			
+			});
+
+});
+
+</script>
+</head>
+<body>
+<input type="button" id="btn" value="Click me" />
+<span id="mytable">
+
+</span>
+</body>
+</html>

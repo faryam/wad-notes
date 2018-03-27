@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function fun1()
+{
+	var x = new XMLHttpRequest();
+	x.open("GET","server.php",true);
+	x.send();	
+	x.onreadystatechange = function(){
+		if(x.status == 200 && x.readyState == 4)			
+document.getElementById("msg").innerHTML = x.responseText;
+	};
+	
+}
+</script>
+</head>
+<body>
+<input type="button" value="click me" onclick="fun1();">
+<br>
+<span id="msg"></span>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="myImage1" src="pic_bulboff.gif" width="100" height="180">
+<img id="myImage2" src="pic_bulboff.gif" width="100" height="180">
+<img id="myImage3" src="pic_bulboff.gif" width="100" height="180">
+
+<p>Click the light bulb to turn on/off the light.</p>
+
+<script>
+function changeImage(obj,imgid) {
+    var image = document.getElementById(imgid);
+    if (obj.value==0) {
+        image.src = "pic_bulboff.gif";
+    } else if  (obj.value=='1') {
+        image.src = "pic_bulbon.gif";
+    } else {
+		alert("invalid input");
+	}
+}
+</script>
+
+<input type='text' onchange="changeImage(this,'myImage1')" size="6">
+<input type='text' onchange="changeImage(this,'myImage2')" size="6">
+<input type='text' onchange="changeImage(this,'myImage3')" size="6">
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<title>Lecture 12</title>
+
+<head>
+
+<style>
+fieldset{
+	width:400px;
+	text-align:left;
+	margin-left:100px;	
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#embtn').click(function(){
+		$("#em").hide();
+		$("#pa").show();
+	});
+	$('#papre').click(function(){
+		$("#em").show();
+		$("#pa").hide();
+	});
+	$('#pasbtn').click(function(){
+		$("#pass").show();
+		$("#pa").hide();
+	});
+	$('#prbtn').click(function(){
+		$("#pass").hide();
+		$("#pa").show();
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+<fieldset id="em">
+<h3>Enter Email Address : </h3>
+<p>Email</p> <input type="text" name="ema" id="ema" required/>
+<input type ="button" id="embtn" name="embtn" value ="NEXT">
+</fieldset>
+
+<fieldset id="pa" hidden>
+<h3>Enter Password : </h3>
+<p>Password : </p> <input type="password" name="pas" id="pas" required/>
+<input type ="button" id="papre" name="papre" value ="Previouse">
+<input type ="button" id="pasbtn" name="pabtn" value ="NEXT">
+</fieldset>
+
+<fieldset id="pass" hidden>
+<h3>Confrim Password : </h3>
+<p>Confirm Password</p> <input type="password" name="passw" id="passw" required/>
+<input type ="button" id="prbtn" name="prbtn" value ="Previouse">
+</fieldset>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+h1
+{
+	border:2px solid red;
+	padding:10px;
+	margin:10px;
+	width:20%;
+	display:inline-block;
+}
+
+h2
+{
+	border`:2px solid navy;
+	padding:10px;
+}
+img
+{
+	height:50px;
+	width:50px;
+	display:block;
+	layout:absolute;
+	left:0px;
+	right:0px;
+}

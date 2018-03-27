@@ -1,0 +1,46 @@
+<html>
+<title>Lecture 12</title>
+
+<head>
+
+<style>
+div{
+	width:400px;
+	text-align:left;
+	margin-bottom:30px;	
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$('#bon').click(function(){
+		$("#on").show();
+		$("#off").hide();
+	});
+	$('#boff').click(function(){
+		$("#off").show();
+		$("#on").hide();
+	});
+	
+});
+
+</script>
+
+</head>
+<body>
+
+<div id="off">
+<img src="pic_bulboff.gif">
+</div>
+
+<div id="on" hidden>
+<img src="pic_bulbon.gif">
+</div>
+
+<input type="button" id="bon" value="on"/>
+<input type="button" id="boff" value="off"/>
+
+
+</body>
+</html>
